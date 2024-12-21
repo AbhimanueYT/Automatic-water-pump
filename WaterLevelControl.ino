@@ -60,12 +60,4 @@ void loop() {
   count=0;
   }
   delay(2000);}
-  // delay(100);
-  // if(distance>30){
-  // digitalWrite(relay, HIGH);
-  // Serial.println("Relays ON");
-  // delay(1000);
-  // digitalWrite(relay, LOW);
-  // Serial.println("Relays OFF");
-  // delay(1000);}
 }
