@@ -1,9 +1,9 @@
-const int relay = 4;
+const int relay = 4;//Relay Module
 const int trigPin = 9;
 const int echoPin = 10;
-const int buz = 7;
-const int re = A0;
-const int val = 2;
+const int buz = 7;//Buzzer
+const int re = A0;//To give analog signals.
+const int val = 2;//To find presents of water in pipe by reading value from A0.
 
 long duration; 
 int distance;
@@ -47,14 +47,14 @@ void loop() {
   distance = duration * 0.034 / 2;
   Serial.print("Distance: ");
   Serial.println(distance);
-  if(distance<=25){
+  if(distance<=25){//Distance when motor need to ON.
   digitalWrite(relay, HIGH);
   Serial.println("Relays ON");
   count++;
   read = analogRead(re);
     Serial.println(read);
   }
-  else if(distance>=40){
+  else if(distance>=40){//Distance when motor need to OFF.
   digitalWrite(relay, LOW);
   Serial.println("Relays OFF");
   count=0;
